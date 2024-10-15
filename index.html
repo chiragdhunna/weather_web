@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast Application</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold text-center">Weather Forecast</h1>
+      <div class="mt-4 flex justify-center relative">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Enter city name"
+          class="border rounded p-2"
+        />
+        <button id="search-btn" class="ml-2 bg-blue-500 text-white rounded p-2">
+          Search
+        </button>
+        <button
+          id="current-location-btn"
+          class="ml-2 bg-green-500 text-white rounded p-2"
+        >
+          Current Location
+        </button>
+        <div
+          id="suggestions"
+          class="absolute bg-white border mt-1 rounded shadow-lg z-10"
+        ></div>
+        <!-- Suggestion box -->
+      </div>
+      <div id="recent-searches" class="mt-2"></div>
+      <div id="weather-info" class="mt-6"></div>
+      <div id="forecast-info" class="mt-6"></div>
+    </div>
+
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 hidden"
+    >
+      <div class="loader">Loading...</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
